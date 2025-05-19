@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>City Gallery</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&family=Roboto&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background-color: #F5F5DC;
+      color: #333;
+    }
+
+    header {
+      background-color: #8B4513;
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    header h1 {
+      font-family: 'Noto Serif', serif;
+      margin-bottom: 10px;
+    }
+
+    .subtitle {
+      font-size: 1.2rem;
+      color: #DAA520;
+      animation: fadeInColor 3s ease-in-out infinite alternate;
+    }
+
+    nav {
+      background-color: #DAA520;
+      padding: 10px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      padding: 0;
+      margin: 0;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #8B4513;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      padding: 30px;
+    }
+
+    .city-card {
+      background-color: white;
+      border: 2px solid #DAA520;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.4s ease, background-color 0.4s ease;
+    }
+
+    .city-card:hover {
+      transform: scale(1.03);
+      background-color: #DAA520;
+      color: white;
+    }
+
+    .image-container img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    .city-card:hover img {
+      transform: scale(1.05);
+    }
+
+    .city-card h3 {
+      font-family: 'Noto Serif', serif;
+      text-align: center;
+      color: #8B4513;
+      margin-top: 10px;
+    }
+
+    .city-card p {
+      padding: 0 10px 10px 10px;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInColor {
+      from { color: #DAA520; }
+      to { color: #F5F5DC; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Cultural Cities of Afghanistan</h1>
+    <p class="subtitle">Discover unique beauty and traditions</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="city.html">City of the Day</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="submit.html">Submit</a></li>
+      
+    </ul>
+  </nav>
+
+  <section class="gallery">
+    <div class="city-card">
+      <div class="image-container">
+        <img src="images/herat.jpg" alt="Herat">
+      </div>
+      <h3>Herat</h3>
+      <p>Herat is known for poetry and art. It is one of Afghanistan’s oldest cities, famous for Islamic architecture and Persian culture.</p>
+    </div>
+
+    <div class="city-card">
+      <div class="image-container">
+        <img src="images/kabul.jpg" alt="Kabul">
+      </div>
+      <h3>Kabul</h3>
+      <p>Kabul is the capital of Afghanistan, rich in history and traditions. Famous for bazaars, Babur Gardens, and Darul Aman Palace.</p>
+    </div>
+
+    <div class="city-card">
+      <div class="image-container">
+        <img src="images/bamyian.jpg" alt="Bamyan">
+      </div>
+      <h3>Bamyan</h3>
+      <p>Bamyan is known for ancient Buddha statues and Band-e Amir lakes. It's a peaceful region with Hazara cultural heritage.</p>
+    </div>
+
+    <div class="city-card">
+      <div class="image-container">
+        <img src="images/mazare sharif.jpg" alt="Mazar-e-Sharif">
+      </div>
+      <h3>Mazar-e-Sharif</h3>
+      <p>Mazar is known for the Blue Mosque and Nowruz celebration. It is a spiritual and cultural center in the north of Afghanistan.</p>
+    </div>
+  </section>
+
+</body>
+</html>
